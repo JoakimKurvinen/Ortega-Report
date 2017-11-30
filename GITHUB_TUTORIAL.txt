@@ -1,0 +1,56 @@
+--SETTING UP SSH authentication
+
+https://gist.github.com/patrick-ausderau/b6dbb392273eeecca8d5
+these were the tasks we had to do in class, you dont have to follow the example stuff we did but just install git and etc tools.
+
+and then following this:
+https://help.github.com/articles/connecting-to-github-with-ssh/
+to setup authentication between github and your computer.
+you will need to setup a password that you will have to type in everytime you push to github.
+
+--SETTING UP LOCAL REPOSITORY
+
+on windows you can right click, git bash here, into the folder where you want to setup the repository for the project.
+
+then type:
+git clone git@github.com:LeoVaario/Ortega-Report.git
+
+this will create a clone of the remote repository in github onto your local machine.
+
+next:
+git status
+this should confirm that your local repository is working. If it doesnt work, it's probably because you're in wrong directory (try typing:
+cd Ortega-Report
+to change directory (cd) to the right one, or right click inside Ortega-Report folder and gitbash here.
+
+
+--MAKING CHANGES, PUSHING AND PULLING
+
+before changing anything on local repository, you should always PULL from remote repository in github first
+type:
+git pull
+
+then add/remove/modify files at modify repository, work on game etc,
+
+next type:
+git add *
+
+to add all new files to local repository
+
+then type:
+git commit
+
+to commit all changes to LOCAL repository.
+afterwards, you will need to type:
+
+git push
+
+to push your local commited repository to the remote github one.
+After this step, all your changes will be visible and accesible to other members of BIGMANTYRONE
+
+--OPENING PROJECT IN UNITY
+
+after pulling from github, open unity, and on project selection screen click open...
+navigate to Ortega-Report/BigManAsteroids_Full and select the BigManAsteroids_Full folder and click open with unity.
+
+
