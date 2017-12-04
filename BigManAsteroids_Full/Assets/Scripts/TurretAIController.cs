@@ -91,7 +91,7 @@ public class TurretAIController : MonoBehaviour
     GameObject FindTarget(string targetTag)
     {
         GameObject[] potTargets;
-        List<float> potDistance = new List<float>(); // = new List<float>();
+        List<float> potDistance = new List<float>();
         int IndexMin = 0;
 
         //PUTTING ALL POTENTIONAL TARGETS INTO LIST OF GAMEOBJECTS

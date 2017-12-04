@@ -37,6 +37,7 @@ public class PlayerShipController : MonoBehaviour
 
         if (rigidbody.velocity.magnitude > 0)
         {
+            //rigidbody.velocity = transform.up * Speed;
             transform.up = rigidbody.velocity * Speed;
         }
         //************WONDERCODE ENDS HERE***************************************

@@ -90,8 +90,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec373432ddfdd46428def962d1f37e23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 7
-  BulletDecayTime: 1.5
+  Speed: 10
+  BulletDecayTime: 2
 --- !u!114 &114641078559081664
 MonoBehaviour:
   m_ObjectHideFlags: 1

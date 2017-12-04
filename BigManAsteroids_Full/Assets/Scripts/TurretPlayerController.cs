@@ -46,8 +46,6 @@ public class TurretPlayerController : MonoBehaviour
 
         PositionModifier = UnitVec * Radius; //offset of turrest in relation to ship is unitvector direction * magnitude (radius)
 
-
-
         test = AttachedShip.transform.position + PositionModifier; //position of turret = position of AttachedShip + offset
         test.z = AttachedShip.transform.position.z - 1;
         transform.position = test;
