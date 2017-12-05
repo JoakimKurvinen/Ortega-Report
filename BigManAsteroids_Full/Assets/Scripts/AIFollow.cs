@@ -4,7 +4,6 @@ using UnityEngine;
 /// <summary>
 /// simple ai script that turns to face player/target and then adds
 /// force to move in the direction it is facing
-/// ask Aleksi...
 /// </summary>
 public class AIFollow : MonoBehaviour
 {
