@@ -7,8 +7,14 @@ public class GameController : MonoBehaviour {
     public GameObject Turret;
     public GameObject Player;
 
-	// Use this for initialization
-	void Start () {
+
+    void TextBox()
+    {
+        GUI.Label(new Rect(10, 10, 0, 20), "Perkele");
+    }
+
+    // Use this for initialization
+    void Start () {
         /*SpawnTurrets();
         Instantiate(Player, new Vector3(0, 0, 0), Quaternion.Euler(0, 0, 0));
         Debug.Log("playercreated");*/
