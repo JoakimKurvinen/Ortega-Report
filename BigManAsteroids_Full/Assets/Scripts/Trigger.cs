@@ -27,6 +27,7 @@ public class Trigger : MonoBehaviour {
         {
             Debug.Log("Player entered trigger zone");
             Text1.color = new Color(255, 255, 255, 255); //shows text1
+            GameObject.Find("Trigger1").GetComponent<Collider2D>().enabled = false;
         }
     }
 }
