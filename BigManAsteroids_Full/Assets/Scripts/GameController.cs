@@ -15,6 +15,12 @@ public class GameController : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+
+        Cursor.visible = false; 
+
+
+            
+
         /*SpawnTurrets();
         Instantiate(Player, new Vector3(0, 0, 0), Quaternion.Euler(0, 0, 0));
         Debug.Log("playercreated");*/

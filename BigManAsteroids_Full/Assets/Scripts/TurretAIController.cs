@@ -61,6 +61,7 @@ public class TurretAIController : MonoBehaviour
         {
             shooting = true; //if distance is less than attack range
 
+            
             //TURRET ROTATION TOWARDS TARGET
             mousePos = target.transform.position;//gets position of mouse cursor
             turretPos = transform.position;//gets position of turret relative to screen
@@ -72,7 +73,7 @@ public class TurretAIController : MonoBehaviour
                                                                           //print("turret at angle: " + angle);
 
             transform.rotation = Quaternion.Euler(new Vector3(0, 0, (angle - 90f)));//rotates turret to specified angle (-90f to get in phase with cursor)
-
+            
         }
         else
         {
