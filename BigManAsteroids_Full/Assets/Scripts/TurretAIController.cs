@@ -4,7 +4,6 @@ using UnityEngine;
 /// <summary>
 /// simple turret ai which can shoot targets based on what is set.
 /// Distance is checked to see if to start shooting and when to end shooting.
-/// Ask Aleksi....
 /// </summary>
 public class TurretAIController : MonoBehaviour
 {
