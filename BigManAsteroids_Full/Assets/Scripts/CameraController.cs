@@ -18,26 +18,29 @@ public class CameraController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        //CAMERA FOLLOWS SHIP:
-        //Camera position = GameObject ship's x pos and y pos. (Will follow the ship) -leo
-        transform.position = new Vector3(ship.transform.position.x, ship.transform.position.y, -15.0f );
-
-        //CAMERA ZOOMS WITH SCROLLWHEEL:
-        //zoomlevel updated every frame depending on whether mouse is scrolling up or down -leo
-        ZoomLevel = ZoomLevel + ((Input.GetAxis("Mouse ScrollWheel")) * ZoomMultiplier);
-
-        //SET MAX ZOOMS
-        if (ZoomLevel > -MinZoom)
+        if (ship != null)
         {
-            ZoomLevel = -MinZoom;
-        }
-        else if (ZoomLevel < -MaxZoom)
-        {
-            ZoomLevel = -MaxZoom;
-        }
 
-        //this changed the zoom of the camera. if zoom level is not negative, it does not work -leo
-        shipcamera.orthographicSize = -(ZoomLevel);
+            //CAMERA FOLLOWS SHIP:
+            //Camera position = GameObject ship's x pos and y pos. (Will follow the ship) -leo
+            transform.position = new Vector3(ship.transform.position.x, ship.transform.position.y, -15.0f);
 
+            //CAMERA ZOOMS WITH SCROLLWHEEL:
+            //zoomlevel updated every frame depending on whether mouse is scrolling up or down -leo
+            ZoomLevel = ZoomLevel + ((Input.GetAxis("Mouse ScrollWheel")) * ZoomMultiplier);
+
+            //SET MAX ZOOMS
+            if (ZoomLevel > -MinZoom)
+            {
+                ZoomLevel = -MinZoom;
+            }
+            else if (ZoomLevel < -MaxZoom)
+            {
+                ZoomLevel = -MaxZoom;
+            }
+
+            //this changed the zoom of the camera. if zoom level is not negative, it does not work -leo
+            shipcamera.orthographicSize = -(ZoomLevel);
+        }
     }
 }
