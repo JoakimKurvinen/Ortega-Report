@@ -24,8 +24,6 @@ public class TurretPlayerController : MonoBehaviour
     private Vector3 targetPos; //vector of direction turret should point
     private Vector3 test;
 
-    public Texture2D Cursor;
-
     private bool shooting = false;
 
     // Use this for initialization
@@ -102,9 +100,4 @@ public class TurretPlayerController : MonoBehaviour
 
         obj.transform.Rotate(0, 0, Random.Range(-7, 8));//adds a random rotate for the spawned bullets
     }
-    void OnGUI()
-    {
-        GUI.DrawTexture(new Rect(Input.mousePosition.x - 80, -(Input.mousePosition.y)+471, Cursor.width, Cursor.height), Cursor);
-    }
-
 }

@@ -8,8 +8,6 @@ TagManager:
   - Red
   - PLAYER
   - Turret
-  - RedBullet
-  - BlueBullet
   layers:
   - Default
   - TransparentFX
@@ -19,14 +17,14 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - BulletBlue
-  - BulletRed
-  - 
   - Trigger
   - Red
   - Blue
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
