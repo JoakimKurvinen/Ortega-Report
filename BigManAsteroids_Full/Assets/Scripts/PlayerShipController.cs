@@ -9,7 +9,7 @@ public class PlayerShipController : MonoBehaviour
     public GameObject PlayerBullet;
     public float MaxSpeed;
 
-    private Rigidbody2D rigidbody;
+    private Rigidbody2D rigidbodyPlayer;
     private float Speed; 
 
     public AudioClip Shoot;
@@ -18,7 +18,7 @@ public class PlayerShipController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        rigidbody = this.GetComponent<Rigidbody2D>();
+        rigidbodyPlayer = this.GetComponent<Rigidbody2D>();
     }
 
     void FixedUpdate()
@@ -29,24 +29,24 @@ public class PlayerShipController : MonoBehaviour
 
         //Speed of ship is set by holding up/down axis. Once set, the velocity will remain constant.
         Speed += vertical * Acceleration;
-        rigidbody.velocity = transform.up * Speed;
+        rigidbodyPlayer.velocity = transform.up * Speed;
 
         //************WONDERCODE STARTS HERE (HANDLES CAR LIKE MOVEMENT**********
 
         //the velocity of the ship towards +y = absolute velocity * Speed 
 
-        if (rigidbody.velocity.magnitude > 0)
+        if (rigidbodyPlayer.velocity.magnitude > 0)
         {
             //rigidbody.velocity = transform.up * Speed;
-            transform.up = rigidbody.velocity * Speed;
+            transform.up = rigidbodyPlayer.velocity * Speed;
         }
         //************WONDERCODE ENDS HERE***************************************
 
 
-        rigidbody.rotation += (horizontal * TurningRate); //rotation
+        rigidbodyPlayer.rotation += (horizontal * TurningRate); //rotation
 
         //Set speed limit
-        if (rigidbody.velocity.magnitude > MaxSpeed)//for large speeds
+        if (rigidbodyPlayer.velocity.magnitude > MaxSpeed)//for large speeds
         {
             Speed = MaxSpeed -1;
         }
