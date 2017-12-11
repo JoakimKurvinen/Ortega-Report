@@ -35,7 +35,8 @@ public class AIFollow : MonoBehaviour
         if (Vector2.Distance(target.transform.position, transform.position) <= mRange)
         {
             //add force and multiply by mSpeed, which can be changed  
-            GetComponent<Rigidbody2D>().AddForce(transform.up * mSpeed);
+            //GetComponent<Rigidbody2D>().AddForce(transform.up * mSpeed);
+            rigidbody.velocity = transform.up * mSpeed;
         }
 
     }
