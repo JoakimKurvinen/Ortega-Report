@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 
 
@@ -15,7 +14,7 @@ public class TurretPlayerController : MonoBehaviour
     public float Radius; //how far away turret will be in relation to ship
     public float Phase; //which angle turret will be in relation to ship
 
-    public Texture2D Cursor;
+    
 
     private Vector3 PositionModifier; 
     private Vector3 UnitVec; //unitvector direction of offset
@@ -105,8 +104,5 @@ public class TurretPlayerController : MonoBehaviour
 
     }
 
-    void OnGUI()
-    {
-        GUI.DrawTexture(new Rect(Input.mousePosition.x, -(Input.mousePosition.y) + 350, Cursor.width, Cursor.height), Cursor);
-    }
+    
 }

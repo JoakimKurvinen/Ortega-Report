@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerShipController : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class PlayerShipController : MonoBehaviour
     public float TurningRate; //Modifier for ship turning rate
     public GameObject PlayerBullet;
     public float MaxSpeed;
+    public Texture2D Cursor;
+
 
     private Rigidbody2D rigidbodyPlayer;
     private float Speed; 
@@ -19,6 +22,7 @@ public class PlayerShipController : MonoBehaviour
     void Start()
     {
         rigidbodyPlayer = this.GetComponent<Rigidbody2D>();
+        
     }
 
     void FixedUpdate()
@@ -59,6 +63,12 @@ public class PlayerShipController : MonoBehaviour
 
 
 
+    }
+
+    void OnGUI()
+    {
+        GUI.DrawTexture(new Rect(Input.mousePosition.x - 80, -(Input.mousePosition.y) + 470, Cursor.width, Cursor.height), Cursor);
+        
     }
 }
 
