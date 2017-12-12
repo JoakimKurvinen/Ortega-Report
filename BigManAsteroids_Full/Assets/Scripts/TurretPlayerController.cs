@@ -2,19 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
-
 public class TurretPlayerController : MonoBehaviour
 {
-
     public GameObject bullet; //the bullet that the turret shoots
     public GameObject AttachedShip; //gameobject that turret will be attached to
 
     public float Firerate;
     public float Radius; //how far away turret will be in relation to ship
     public float Phase; //which angle turret will be in relation to ship
-
-    
 
     private Vector3 PositionModifier; 
     private Vector3 UnitVec; //unitvector direction of offset
@@ -76,7 +71,6 @@ public class TurretPlayerController : MonoBehaviour
             shooting = false;
         }
        
-        
         /*
         if (Input.GetMouseButtonDown(0) || Input.GetKeyDown("space"))
         {

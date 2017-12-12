@@ -10,6 +10,7 @@ public class PlayerShipController : MonoBehaviour
     public GameObject PlayerBullet;
     public float MaxSpeed;
     public Texture2D Cursor;
+    public bool customcursorenabled;
 
 
     private Rigidbody2D rigidbodyPlayer;
@@ -67,8 +68,10 @@ public class PlayerShipController : MonoBehaviour
 
     void OnGUI()
     {
-        GUI.DrawTexture(new Rect(Input.mousePosition.x - 80, -(Input.mousePosition.y) + 470, Cursor.width, Cursor.height), Cursor);
-        
+        if (customcursorenabled)
+        {
+            GUI.DrawTexture(new Rect(Input.mousePosition.x - 80, -(Input.mousePosition.y) + 470, Cursor.width, Cursor.height), Cursor);
+        }
     }
 }
 

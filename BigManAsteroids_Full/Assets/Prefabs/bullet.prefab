@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114679690867747626}
   m_Layer: 10
   m_Name: bullet
-  m_TagString: BlueBullet
+  m_TagString: Blue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

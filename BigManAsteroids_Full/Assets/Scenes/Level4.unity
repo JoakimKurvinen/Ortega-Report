@@ -1435,7 +1435,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 274060624}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 247, y: 139, z: 0}
+  m_LocalPosition: {x: 451, y: 178, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 457644440}
@@ -2056,7 +2056,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 457644439}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 187, y: -99, z: 0}
+  m_LocalPosition: {x: 391, y: -138, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 274060628}
@@ -2276,7 +2276,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 599708055}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -124, z: 0}
+  m_LocalPosition: {x: 0, y: -163, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 274060628}
@@ -7608,8 +7608,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e88473109cc02c4ba6b919856fec2d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Turret: {fileID: 1310979977107834, guid: 5b4d34407d7fbf04e946b7ff979e45dc, type: 2}
-  Player: {fileID: 0}
+  showcursor: 1
 --- !u!114 &2106721460
 MonoBehaviour:
   m_ObjectHideFlags: 0

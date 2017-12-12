@@ -1767,7 +1767,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 484251266}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 187, y: -99, z: 0}
+  m_LocalPosition: {x: 391, y: -138, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1312234825}
@@ -3039,6 +3039,11 @@ Prefab:
       propertyPath: Cursor
       value: 
       objectReference: {fileID: 2800000, guid: 67b982ec3da7ce54d908df4427ada36c, type: 3}
+    - target: {fileID: 114998927518849328, guid: 88827acd6cb2f5d438e7263da5b6c454,
+        type: 2}
+      propertyPath: customcursorenabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 88827acd6cb2f5d438e7263da5b6c454, type: 2}
   m_IsPrefabParent: 0
@@ -4111,8 +4116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e88473109cc02c4ba6b919856fec2d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Turret: {fileID: 1310979977107834, guid: 5b4d34407d7fbf04e946b7ff979e45dc, type: 2}
-  Player: {fileID: 0}
+  showcursor: 1
 --- !u!114 &1165711473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5098,7 +5102,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1312234821}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 247, y: 139, z: 0}
+  m_LocalPosition: {x: 451, y: 178, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 484251267}
@@ -6102,7 +6106,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1646458541}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -124, z: 0}
+  m_LocalPosition: {x: 0, y: -163, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1312234825}

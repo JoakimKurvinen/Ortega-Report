@@ -5,10 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
+    public bool showcursor;
 
     private void Start()
     {
-        Cursor.visible = false; //hides the cursor so that the crosshair and the crosshair is used instead
+        Cursor.visible = showcursor; //hides the cursor so that the crosshair and the crosshair is used instead
     }
     // Update is called once per frame
     void Update()
