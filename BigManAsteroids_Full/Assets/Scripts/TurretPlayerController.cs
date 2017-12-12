@@ -14,6 +14,8 @@ public class TurretPlayerController : MonoBehaviour
     public float Radius; //how far away turret will be in relation to ship
     public float Phase; //which angle turret will be in relation to ship
 
+    
+
     private Vector3 PositionModifier; 
     private Vector3 UnitVec; //unitvector direction of offset
     private float shipangle;
@@ -99,5 +101,8 @@ public class TurretPlayerController : MonoBehaviour
         //creates a new bullet based and gives it a vector to move along based on the scriptTargets position and rotation
 
         obj.transform.Rotate(0, 0, Random.Range(-7, 8));//adds a random rotate for the spawned bullets
+
     }
+
+    
 }

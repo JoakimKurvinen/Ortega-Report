@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 60231671663914714}
   - component: {fileID: 114003024225657772}
   - component: {fileID: 114067714644407016}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: small_ships (1)
   m_TagString: Red
   m_Icon: {fileID: 0}

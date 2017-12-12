@@ -34,8 +34,8 @@ public class AIFollow : MonoBehaviour
 
         if (Vector2.Distance(target.transform.position, transform.position) <= mRange)
         {
-            //add force and multiply by mSpeed, which can be changed  
-            //GetComponent<Rigidbody2D>().AddForce(transform.up * mSpeed);
+            //sets the ais velocity to be similar to the players movement style
+            
             rigidbody.velocity = transform.up * mSpeed;
         }
 
