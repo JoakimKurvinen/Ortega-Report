@@ -8,6 +8,8 @@ TagManager:
   - Red
   - PLAYER
   - Turret
+  - RedBullet
+  - BlueBullet
   layers:
   - Default
   - TransparentFX
