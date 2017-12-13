@@ -78,20 +78,20 @@ public class LaserTurretAIController : MonoBehaviour
                                                                           //print("turret at angle: " + angle);
 
             transform.rotation = Quaternion.Euler(new Vector3(0, 0, (angle - 90f)));//rotates turret to specified angle (-90f to get in phase with cursor)
-
+            Debug.Log("target found");
         }
         else
         {
+            Debug.Log("target is null");
             shooting = false;
         }
         StartCoroutine(Shoot());
-        
         RenderLine();
     }
     IEnumerator Shoot()
     {   
         
-        if (shooting == true && running == false) //checks if shooting is true or false
+        if (shooting == true && running == false) //checks if shooting is true or is currently waiting after fireing
         {
             running = true;
             laseron = true;
@@ -113,23 +113,27 @@ public class LaserTurretAIController : MonoBehaviour
     {
         LineRenderer line = GetComponent<LineRenderer>();
         if (laseron == true)
-            {
+        {
             line.enabled = true;
+            line.positionCount = 2;
+            line.startWidth = 0.1f;
+            line.endWidth = 0.1f;
+            if (target != null)
+            {
+                line.SetPosition(0, new Vector2(this.transform.position.x, this.transform.position.y));
+                line.SetPosition(1, new Vector2(target.transform.position.x, target.transform.position.y));
             }
+            Debug.Log("laseron");
+        }
         else
             {
             line.enabled = false;
+            Debug.Log("laseroff");
             }
 
-        line.positionCount = 2;
-        line.startWidth = 0.1f;
-        line.endWidth = 0.1f;
+        
 
-        if (target != null)
-            {
-            line.SetPosition(0, new Vector2(this.transform.position.x, this.transform.position.y));
-            line.SetPosition(1, new Vector2(target.transform.position.x, target.transform.position.y));
-            }
+        
     }
     GameObject FindTarget(string targetTag)
     {
