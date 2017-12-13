@@ -40,8 +40,8 @@ public class Speedometer : MonoBehaviour {
 	
 
         
-		GUI.Box(new Rect (250, 50, 500, 60),"<color=white><size=20>You have arrived in the star system, but the radar has picked up contacts. Prepare for combat!</size></color>", myStyle);
-		StartCoroutine(Bye());
+		//GUI.Box(new Rect (250, 50, 500, 60),"<color=white><size=20>You have arrived in the star system, but the radar has picked up contacts. Prepare for combat!</size></color>", myStyle);
+		//StartCoroutine(Bye());
       }
 	IEnumerator Bye(){
 		yield return new WaitForSeconds(5);
