@@ -33,8 +33,8 @@ public GUIStyle myGUIStyle;
       }
 	IEnumerator Bye(){
 		yield return new WaitForSeconds(2);
-		gameObject.SetActive(false);
-		GameObject.Find("Panel").GetComponent<Image>().enabled = false;
+        GameObject.Find("GameController").GetComponent<ObjectiveTextFour>().enabled = false;
+        GameObject.Find("Panel").GetComponent<Image>().enabled = false;
 	
 	}
 	}

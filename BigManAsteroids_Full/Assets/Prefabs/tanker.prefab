@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4263517141827538}
   - component: {fileID: 212824177449904020}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: space_bomb_blue (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4405016504285708}
   - component: {fileID: 212882684967113496}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: mothership_blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 60673046422164174}
   - component: {fileID: 114528364822928022}
   - component: {fileID: 114543508340977110}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: tanker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4066475402173288}
   - component: {fileID: 212547275688429020}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: space_bomb_blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -28,14 +28,16 @@ public GUIStyle myGUIStyle;
 	
 
         
-		GUI.Box(new Rect (230, 50, 500, 60),"<color=white><size=20>You must find out why these strange hostiles attacked us. Follow the asteroid trail to a communications outpost in order to unearth the history of the first wave colonists, and these hostiles.</size></color>", myStyle);
+		GUI.Box(new Rect (230, 50, 500, 60),"<color=white><size=20>You must find out why these strange hostiles attacked us. Follow the asteroid trail to a communications outpost in order to unearth the history of the first wave of colonists, and these hostiles.</size></color>", myStyle);
 		StartCoroutine(Bye());
       }
 	IEnumerator Bye(){
 		yield return new WaitForSeconds(10);
-		gameObject.SetActive(false);
+        GameObject.Find("GameController").GetComponent<ObjectiveTextTwo>().enabled = false;
 		GameObject.Find("Panel").GetComponent<Image>().enabled = false;
-	
-	}
+        
+
+
+    }
 	}
 

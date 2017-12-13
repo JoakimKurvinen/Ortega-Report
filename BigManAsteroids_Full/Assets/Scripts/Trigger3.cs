@@ -21,7 +21,9 @@ public class Trigger3 : MonoBehaviour
             Instantiate(Spawn, new Vector2(MS.transform.position.x, MS.transform.position.y), MS.transform.rotation);
             Destroy(Rekt);
             Destroy(this.gameObject);
-            
+
+            GameObject.Find("Trigger2").GetComponent<BoxCollider2D>().enabled = true;
+
         }
     }
 }
