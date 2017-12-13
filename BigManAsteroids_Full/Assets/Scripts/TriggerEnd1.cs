@@ -5,13 +5,23 @@ using UnityEngine.SceneManagement;
 
 public class TriggerEnd1 : MonoBehaviour
 {
+    public string target;
+
 
     void OnTriggerExit2D(Collider2D Ship) //triggers on enter
     {
-        if (FindTarget("Red").Length == 0) //if name is correct
+        Debug.Log(FindTarget("Red"));
+        if (FindTarget(target).Length == 1) //if name is correct
         {
-            SceneManager.LoadScene("Level3", LoadSceneMode.Single);
+            StartCoroutine(NextLevel());
+            
         }
+
+    }
+    IEnumerator NextLevel()
+    {
+        yield return new WaitForSeconds(5);
+        SceneManager.LoadScene("Level3", LoadSceneMode.Single);
 
     }
     GameObject[] FindTarget(string targetTag)
@@ -19,7 +29,7 @@ public class TriggerEnd1 : MonoBehaviour
         GameObject[] potTargets;
         
         potTargets = GameObject.FindGameObjectsWithTag(targetTag);
-
+        Debug.Log(potTargets.Length);
         return potTargets;
     }
 }

@@ -13,11 +13,11 @@ public class CollisionDetection : MonoBehaviour {
     {
 
         if  (
-                (this.gameObject.tag == ("Blue") && collision.gameObject.tag == ("Red")) 
+                ((this.gameObject.tag == ("Blue")||this.gameObject.tag == ("BlueBullet")) && (collision.gameObject.tag == ("Red")||collision.gameObject.tag == ("RedBullet"))) 
 
             ||
             
-                (this.gameObject.tag == ("Red") && collision.gameObject.tag == ("Blue"))
+                ((this.gameObject.tag == ("Red")||this.gameObject.tag == ("RedBullet")) && (collision.gameObject.tag == ("Blue")||collision.gameObject.tag == ("BlueBullet")))
             )
         {
             Destroy(collision.gameObject);

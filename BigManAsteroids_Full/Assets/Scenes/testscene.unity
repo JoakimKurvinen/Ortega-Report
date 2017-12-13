@@ -227,9 +227,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AttachedShip: {fileID: 903535418}
-  aRange: 15
+  aRange: 10
   Firerate: 0.05
-  targetTag: Red
+  targetTag: RedBullet
   laserMat: {fileID: 2100000, guid: cd25c0c816bd94141973cdbd90bac062, type: 2}
   Laserfade: {fileID: 1071783644133128, guid: 65bab0e0bbdfe9d4aae982e6845f16ae, type: 2}
   Radius: 1.5
