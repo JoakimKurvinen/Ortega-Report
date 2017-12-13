@@ -37,14 +37,14 @@ public class TriggerSpawn2 : MonoBehaviour
 
 
             //enemies that attack colonyship
-            Instantiate(Spawned2, new Vector2(TargetLocation2.transform.position.x - 280, TargetLocation2.transform.position.y - 30), TargetLocation2.transform.rotation);
-            Instantiate(Spawned2, new Vector2(TargetLocation2.transform.position.x - 300, TargetLocation2.transform.position.y - 30), TargetLocation2.transform.rotation);
-            Instantiate(Spawned2, new Vector2(TargetLocation2.transform.position.x - 300, TargetLocation2.transform.position.y + 30), TargetLocation2.transform.rotation);
-            Instantiate(Spawned2, new Vector2(TargetLocation2.transform.position.x - 250, TargetLocation2.transform.position.y + 50), TargetLocation2.transform.rotation);
-            Instantiate(Spawned2, new Vector2(TargetLocation2.transform.position.x - 250, TargetLocation2.transform.position.y + 60), TargetLocation2.transform.rotation);
-            Instantiate(Spawned2, new Vector2(TargetLocation2.transform.position.x - 280, TargetLocation2.transform.position.y + 40), TargetLocation2.transform.rotation);
-            Instantiate(Spawned2, new Vector2(TargetLocation2.transform.position.x - 280, TargetLocation2.transform.position.y + 20), TargetLocation2.transform.rotation);
-            Instantiate(Spawned2, new Vector2(TargetLocation2.transform.position.x - 300, TargetLocation2.transform.position.y + 20), TargetLocation2.transform.rotation);
+            Instantiate(Spawned, new Vector2(TargetLocation2.transform.position.x - 280, TargetLocation2.transform.position.y - 200), TargetLocation2.transform.rotation);
+            Instantiate(Spawned, new Vector2(TargetLocation2.transform.position.x - 300, TargetLocation2.transform.position.y - 230), TargetLocation2.transform.rotation);
+            Instantiate(Spawned, new Vector2(TargetLocation2.transform.position.x - 300, TargetLocation2.transform.position.y - 200), TargetLocation2.transform.rotation);
+            Instantiate(Spawned, new Vector2(TargetLocation2.transform.position.x - 250, TargetLocation2.transform.position.y - 200), TargetLocation2.transform.rotation);
+            Instantiate(Spawned, new Vector2(TargetLocation2.transform.position.x - 250, TargetLocation2.transform.position.y - 250), TargetLocation2.transform.rotation);
+            Instantiate(Spawned, new Vector2(TargetLocation2.transform.position.x - 280, TargetLocation2.transform.position.y - 230), TargetLocation2.transform.rotation);
+            Instantiate(Spawned, new Vector2(TargetLocation2.transform.position.x - 280, TargetLocation2.transform.position.y - 240), TargetLocation2.transform.rotation);
+            Instantiate(Spawned, new Vector2(TargetLocation2.transform.position.x - 300, TargetLocation2.transform.position.y - 230), TargetLocation2.transform.rotation);
 
             GameObject.Find("Trigger1").GetComponent<BoxCollider2D>().enabled = false; //disables the trigger from use
 
