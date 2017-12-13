@@ -8,16 +8,20 @@ public class BulletController : MonoBehaviour
     public int Speed;
     public float BulletDecayTime;
 
+    private Rigidbody2D rigid;
+
     // Use this for initialization
     void Start()
     {
         //set bullet to destroy itself after 1 seconds
         Destroy(gameObject, BulletDecayTime);
 
-
         //Push the bullet in the direction it is facing
-        GetComponent<Rigidbody2D>().AddForce(transform.up * 100 * Speed);
-
+        rigid = GetComponent<Rigidbody2D>();
+        if (rigid != null)
+        {
+            rigid.AddForce(transform.up * 100 * Speed);
+        }
     }
 
     // Update is called once per frame
