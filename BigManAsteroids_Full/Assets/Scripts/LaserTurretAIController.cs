@@ -80,12 +80,12 @@ public class LaserTurretAIController : MonoBehaviour
                                                                               //print("turret at angle: " + angle);
 
                 transform.rotation = Quaternion.Euler(new Vector3(0, 0, (angle - 90f)));//rotates turret to specified angle (-90f to get in phase with cursor)
-                Debug.Log("target found");
+                
             }
         }
         else
         {
-            Debug.Log("target is null");
+            
             shooting = false;
         }
         StartCoroutine(Shoot());
@@ -126,12 +126,12 @@ public class LaserTurretAIController : MonoBehaviour
                 line.SetPosition(0, new Vector2(this.transform.position.x, this.transform.position.y));
                 line.SetPosition(1, new Vector2(target.transform.position.x, target.transform.position.y));
             }
-            Debug.Log("laseron");
+            
         }
         else
             {
             line.enabled = false;
-            Debug.Log("laseroff");
+            
             }
 
         

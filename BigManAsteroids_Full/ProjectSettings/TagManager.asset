@@ -10,6 +10,7 @@ TagManager:
   - Turret
   - RedBullet
   - BlueBullet
+  - Swarm
   layers:
   - Default
   - TransparentFX
