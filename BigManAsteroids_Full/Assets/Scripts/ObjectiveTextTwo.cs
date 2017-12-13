@@ -28,7 +28,7 @@ public GUIStyle myGUIStyle;
 
 
 
-        GUI.Box(new Rect((1920 / 2) - 250, 130, 500, 60), "<color=white><size=36>You must find out why these strange hostiles attacked us. Follow the asteroid trail to a communications outpost in order to unearth the history of the first wave of colonists, and these hostiles.</size></color>", myStyle);
+        GUI.Box(new Rect((1920 / 2) - 600, 130, 1200, 60), "<color=white><size=36>You must find out why these strange hostiles attacked us. Follow the asteroid trail to a communications outpost in order to unearth the history of the first wave of colonists, and these hostiles.</size></color>", myStyle);
 		StartCoroutine(Bye());
       }
 	IEnumerator Bye(){

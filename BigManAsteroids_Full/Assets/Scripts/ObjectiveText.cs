@@ -28,7 +28,7 @@ public GUIStyle myGUIStyle;
 	
 
         
-		GUI.Box(new Rect ((1920/2)-250, 130, 500, 60),"<color=white><size=36>You have arrived in the Ortega star system, but your radar has picked up hostile contacts. Prepare for combat!</size></color>", myStyle);
+		GUI.Box(new Rect ((1920/2)- 600, 130, 1200, 60),"<color=white><size=36>You have arrived in the Ortega star system, but your radar has picked up hostile contacts. Prepare for combat!</size></color>", myStyle);
 		StartCoroutine(Bye());
       }
 	IEnumerator Bye(){

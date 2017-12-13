@@ -48,26 +48,7 @@ public class Level4Controller : MonoBehaviour {
     {
 
     }
-    private void OnGUI()
-    {
-        GUIStyle myStyle = new GUIStyle();
-        myStyle.wordWrap = true;
-
-
-        GUI.contentColor = Color.white;
-        GUI.color = Color.white;
-
-
-
-        GUI.Box(new Rect(250, 50, 500, 60), "<color=white><size=20>Defend the Colony Ship while they power up to escape the solar system!</size></color>", myStyle);
-        
-    }
-    /*IEnumerator Bye()
-    {
-        yield return new WaitForSeconds(5);
-        GUI.Box(new Rect(250, 50, 500, 60), "<color=white><size=20>We've fitted the tanker with powerful lasers to help you out.</size></color>");
-
-    }*/
+   
     IEnumerator Waves()
     {
 
