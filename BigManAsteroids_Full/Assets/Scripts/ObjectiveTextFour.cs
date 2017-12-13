@@ -28,14 +28,14 @@ public GUIStyle myGUIStyle;
 
 
 
-        GUI.Box(new Rect((1920 / 2) - 250, 130, 500, 60), "<color=white><size=36>Massive radar contact approaching, it's the swarm! Fight for your life!</size></color>", myStyle);
+        GUI.Box(new Rect((1920 / 2) - 600, 130, 1200, 60), "<color=white><size=36>Massive radar contact approaching, it's the swarm! Fight for your life! Stay near the tanker to survive!</size></color>", myStyle);
 		StartCoroutine(Bye());
       }
 	IEnumerator Bye(){
-		yield return new WaitForSeconds(2);
+		yield return new WaitForSeconds(5);
         GameObject.Find("GameController").GetComponent<ObjectiveTextFour>().enabled = false;
         GameObject.Find("Panel").GetComponent<Image>().enabled = false;
 	
 	}
 	}
-//Contacts approaching! Your arrival to the communications array generated unwanted attention, return at once after fighting off the bogeys. 
+
