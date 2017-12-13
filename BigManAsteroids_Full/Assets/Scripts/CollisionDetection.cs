@@ -4,33 +4,20 @@ using UnityEngine;
 
 public class CollisionDetection : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        
-	}
+    void Start()
+    {
+
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        /*if  (
-            (this.gameObject.tag == ("Blue") && collision.gameObject.tag == ("Blue")) ||
-            (this.gameObject.tag == ("¨Red") && collision.gameObject.tag == ("Red"))
-            )
-        {
-            Physics2D.IgnoreCollision(this, collision);
-        }*/
-        
-
 
         if  (
-                (this.gameObject.tag == ("Blue") && collision.gameObject.tag == ("Red")) 
+                ((this.gameObject.tag == ("Blue")||this.gameObject.tag == ("BlueBullet")) && (collision.gameObject.tag == ("Red")||collision.gameObject.tag == ("RedBullet"))) 
 
             ||
             
-                (this.gameObject.tag == ("¨Red") && collision.gameObject.tag == ("Blue"))
+                ((this.gameObject.tag == ("Red")||this.gameObject.tag == ("RedBullet")) && (collision.gameObject.tag == ("Blue")||collision.gameObject.tag == ("BlueBullet")))
             )
         {
             Destroy(collision.gameObject);

@@ -21,6 +21,7 @@ public class AIFollow : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        target = GameObject.Find("PlayerShip");
         rigidbody = this.GetComponent<Rigidbody2D>();
     }
 

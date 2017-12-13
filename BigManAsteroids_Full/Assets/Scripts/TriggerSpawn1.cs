@@ -28,6 +28,7 @@ public class TriggerSpawn1 : MonoBehaviour {
             Instantiate(Spawned, new Vector2(TargetLocation.transform.position.x + 150, TargetLocation.transform.position.y + 30), TargetLocation.transform.rotation);
             // spawns indicated object at triggers center position +- values
             GameObject.Find("Trigger1").GetComponent<BoxCollider2D>().enabled = false;
+            GameObject.Find("TriggerEnd").GetComponent<BoxCollider2D>().enabled = true;
         }
     }
 }

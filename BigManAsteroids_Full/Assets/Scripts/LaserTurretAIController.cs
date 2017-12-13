@@ -63,35 +63,39 @@ public class LaserTurretAIController : MonoBehaviour
 
         target = FindTarget(targetTag);
 
-        if (Vector2.Distance(target.transform.position, transform.position) <= aRange && target != null)
-        {
-            shooting = true; //if distance is less than attack range
+        //if (target != null)
 
-            //TURRET ROTATION TOWARDS TARGET
-            mousePos = target.transform.position;//gets position of target
-            turretPos = transform.position;//gets position of turret relative to screen
+        //{
+            if (Vector2.Distance(target.transform.position, transform.position) <= aRange)
+            {
+                shooting = true; //if distance is less than attack range
 
-            targetPos.x = mousePos.x - turretPos.x;//creates targetPos vector, drawing from position of turret to target
-            targetPos.y = mousePos.y - turretPos.y;
+                //TURRET ROTATION TOWARDS TARGET
+                mousePos = target.transform.position;//gets position of target
+                turretPos = transform.position;//gets position of turret relative to screen
 
-            angle = Mathf.Atan2(targetPos.y, targetPos.x) * Mathf.Rad2Deg;//for calculating angle of how much turret has to rotate so it is pointing towards mouse
-                                                                          //print("turret at angle: " + angle);
+                targetPos.x = mousePos.x - turretPos.x;//creates targetPos vector, drawing from position of turret to target
+                targetPos.y = mousePos.y - turretPos.y;
 
-            transform.rotation = Quaternion.Euler(new Vector3(0, 0, (angle - 90f)));//rotates turret to specified angle (-90f to get in phase with cursor)
+                angle = Mathf.Atan2(targetPos.y, targetPos.x) * Mathf.Rad2Deg;//for calculating angle of how much turret has to rotate so it is pointing towards mouse
+                                                                              //print("turret at angle: " + angle);
 
-        }
+                transform.rotation = Quaternion.Euler(new Vector3(0, 0, (angle - 90f)));//rotates turret to specified angle (-90f to get in phase with cursor)
+                Debug.Log("target found");
+            }
+        //}
         else
         {
+            Debug.Log("target is null");
             shooting = false;
         }
         StartCoroutine(Shoot());
-        
         RenderLine();
     }
     IEnumerator Shoot()
     {   
         
-        if (shooting == true && running == false) //checks if shooting is true or false
+        if (shooting == true && running == false) //checks if shooting is true or is currently waiting after fireing
         {
             running = true;
             laseron = true;
@@ -113,23 +117,27 @@ public class LaserTurretAIController : MonoBehaviour
     {
         LineRenderer line = GetComponent<LineRenderer>();
         if (laseron == true)
-            {
+        {
             line.enabled = true;
+            line.positionCount = 2;
+            line.startWidth = 0.1f;
+            line.endWidth = 0.1f;
+            if (target != null)
+            {
+                line.SetPosition(0, new Vector2(this.transform.position.x, this.transform.position.y));
+                line.SetPosition(1, new Vector2(target.transform.position.x, target.transform.position.y));
             }
+            Debug.Log("laseron");
+        }
         else
             {
             line.enabled = false;
+            Debug.Log("laseroff");
             }
 
-        line.positionCount = 2;
-        line.startWidth = 0.1f;
-        line.endWidth = 0.1f;
+        
 
-        if (target != null)
-            {
-            line.SetPosition(0, new Vector2(this.transform.position.x, this.transform.position.y));
-            line.SetPosition(1, new Vector2(target.transform.position.x, target.transform.position.y));
-            }
+        
     }
     GameObject FindTarget(string targetTag)
     {
