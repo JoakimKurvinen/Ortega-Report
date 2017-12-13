@@ -16,7 +16,8 @@ public class SwarmParent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (this.transform.childCount <= 2)
+        if (this.transform.childCount <= 2)//if there is 2 or less minions surrounding the parent, parent and all remaining
+            //minions are destroyed
         {
             Destroy(this.gameObject);
         }

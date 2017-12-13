@@ -5,44 +5,21 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class Level4Controller : MonoBehaviour {
-    public GameObject PlayerShip;
+    
     public GameObject SwarmPar;
     public GameObject SmallShip;
     public GameObject BigShip;
-    public GameObject Spawn1;
+    public GameObject Spawn1; //following are possible spawn locations, empty game objects with transforms
     public GameObject Spawn2;
     public GameObject Spawn3;
     public GameObject Spawn4;
 
-    private bool running = false;
-    private GameObject[] gmobj1;
-    private GameObject[] gmobj2;
-
-    private bool wave1over = false;
-    private bool wave2over = false;
-    private bool wave3over = false;
-    private bool wave4over = false;
-
     // Use this for initialization
     void Start ()
     {
-            StartCoroutine(Waves());
+            StartCoroutine(Waves());//starts the wave coroutine
     }
 
-    /*IEnumerator SpawnWave1()
-    {
-        yield return new WaitForSeconds(2);
-        while (true)
-        {
-            for (int i = 0; i < 5; i++)
-            {
-            Instantiate(SwarmPar, new Vector2(Spawn1.transform.position.x + Random.Range(-30, 30), Spawn1.transform.position.y + Random.Range(-30, 30)), Spawn1.transform.rotation);
-
-            yield return new WaitForSeconds(5);
-            }
-            yield return new WaitForSeconds(5);
-            }
-        }*/
     // Update is called once per frame
     void Update ()
     {
@@ -52,118 +29,58 @@ public class Level4Controller : MonoBehaviour {
     IEnumerator Waves()
     {
 
-        for (int wavenum = 0; wavenum < 5; wavenum++)
+        for (int wavenum = 0; wavenum < 5; wavenum++)//total of 4 waves + victory condition
+            //run a for loop for each wave + victory condition
         {
-            if (wavenum == 0)
+            if (wavenum == 0)//wave 1
             {
-                for (int u = 0; u < 5; u++)
+                for (int u = 0; u < 5; u++)//spawn 5 swarms
                 {
                     Instantiate(SwarmPar, new Vector2(Spawn1.transform.position.x + Random.Range(-30, 30), Spawn1.transform.position.y + Random.Range(-30, 30)), Spawn1.transform.rotation);
                 }
-                yield return new WaitForSeconds(6);
+                yield return new WaitForSeconds(6);//waits 6 seconds before next wave
             }
-            if (wavenum == 1)
+            if (wavenum == 1)//wave 2
             {
-                for (int j = 0; j < 6; j++)
+                for (int j = 0; j < 6; j++)//spawn 6 swarms, 6x3 smallships
                 {
                     Instantiate(SwarmPar, new Vector2(Spawn2.transform.position.x + Random.Range(-30, 30), Spawn2.transform.position.y + Random.Range(-30, 30)), Spawn1.transform.rotation);
                     Instantiate(SmallShip, new Vector2(Spawn2.transform.position.x + Random.Range(-30, 30), Spawn2.transform.position.y + Random.Range(-30, 30)), Spawn1.transform.rotation);
                     Instantiate(SmallShip, new Vector2(Spawn3.transform.position.x + Random.Range(-30, 30), Spawn3.transform.position.y + Random.Range(-30, 30)), Spawn1.transform.rotation);
                     Instantiate(SmallShip, new Vector2(Spawn4.transform.position.x + Random.Range(-30, 30), Spawn4.transform.position.y + Random.Range(-30, 30)), Spawn1.transform.rotation);
-
+                    //spawn locations are set but each instance is spawned with random range of coordinates
                 }
-                yield return new WaitForSeconds(10);
+                yield return new WaitForSeconds(10);//waits 10 seconds before next wave
             }
-            if (wavenum == 2)
+            if (wavenum == 2)//wave 3
             {
-                for (int k = 0; k < 6; k++)
+                for (int k = 0; k < 6; k++)//spawn 6x4 bigships
                 {
                     Instantiate(BigShip, new Vector2(Spawn1.transform.position.x + Random.Range(-30, 30), Spawn1.transform.position.y + Random.Range(-30, 30)), Spawn1.transform.rotation);
                     Instantiate(BigShip, new Vector2(Spawn2.transform.position.x + Random.Range(-30, 30), Spawn2.transform.position.y + Random.Range(-30, 30)), Spawn1.transform.rotation);
                     Instantiate(BigShip, new Vector2(Spawn3.transform.position.x + Random.Range(-30, 30), Spawn3.transform.position.y + Random.Range(-30, 30)), Spawn1.transform.rotation);
                     Instantiate(BigShip, new Vector2(Spawn4.transform.position.x + Random.Range(-30, 30), Spawn4.transform.position.y + Random.Range(-30, 30)), Spawn1.transform.rotation);
                 }
-                yield return new WaitForSeconds(12);
+                yield return new WaitForSeconds(12);//waits 12 seconds
             }
-            if (wavenum == 3)
+            if (wavenum == 3)//wave 4
             {
                 
-                for (int h = 0; h < 12; h++)
+                for (int h = 0; h < 12; h++)//spawns 24x swarms and 24x bigships
                 {
                     Instantiate(SwarmPar, new Vector2(Spawn1.transform.position.x + Random.Range(-30, 30), Spawn1.transform.position.y + Random.Range(-30, 30)), Spawn1.transform.rotation);
                     Instantiate(SwarmPar, new Vector2(Spawn2.transform.position.x + Random.Range(-30, 30), Spawn2.transform.position.y + Random.Range(-30, 30)), Spawn1.transform.rotation);
                     Instantiate(BigShip, new Vector2(Spawn3.transform.position.x + Random.Range(-30, 30), Spawn3.transform.position.y + Random.Range(-30, 30)), Spawn1.transform.rotation);
                     Instantiate(BigShip, new Vector2(Spawn4.transform.position.x + Random.Range(-30, 30), Spawn4.transform.position.y + Random.Range(-30, 30)), Spawn1.transform.rotation);
                 }
-                yield return new WaitForSeconds(35);
+                yield return new WaitForSeconds(35);//waits 35 seconds
             }
-            if (wavenum == 4)
+            if (wavenum == 4)//victory condition, after elapsed time, if player has survived, victory screen
             {
-                SceneManager.LoadScene("Level5", LoadSceneMode.Single);
-            }
-            yield return new WaitForSeconds(10);
-        }
-    }
-    /*IEnumerator Wave2()
-    {
-        running = true;
-        Debug.Log("starting 2222");
-        for (int i = 0; i <= 6; i++)
-        {
-            Instantiate(SwarmPar, new Vector2(Spawn2.transform.position.x + Random.Range(-30, 30), Spawn2.transform.position.y + Random.Range(-30, 30)), Spawn1.transform.rotation);
-            Instantiate(SmallShip, new Vector2(Spawn2.transform.position.x + Random.Range(-30, 30), Spawn2.transform.position.y + Random.Range(-30, 30)), Spawn1.transform.rotation);
-        }
-        yield return new WaitForSeconds(10);
-        wave2over = true;
-        running = false;
-        
-    }*/
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-
-        Debug.Log(wave1over);
-        
-
-        gmobj1 = GameObject.FindGameObjectsWithTag("Swarm");
-        gmobj2 = GameObject.FindGameObjectsWithTag("Red");
-
-        Debug.Log(gmobj1.Length);
-        Debug.Log(gmobj2.Length);
-
-        if (gmobj1.Length <= 1)
-        {
-            wave1over = true;
-        }
-        
-        if (wave1over == true)
-        {
-            for (int i = 0; i <= 6; i++)
-            {
-                Instantiate(SwarmPar, new Vector2(Spawn2.transform.position.x + Random.Range(-30, 30), Spawn2.transform.position.y + Random.Range(-30, 30)), Spawn1.transform.rotation);
-                Instantiate(SmallShip, new Vector2(Spawn2.transform.position.x + Random.Range(-30, 30), Spawn2.transform.position.y + Random.Range(-30, 30)), Spawn1.transform.rotation);
+                SceneManager.LoadScene("Level5", LoadSceneMode.Single);//scene 5 is victory screen
             }
             
         }
-        if (wave1over == true && gmobj2.Length == 0)
-        {
-            wave2over = true;
-        }
-        if (wave2over == true)
-        {
-            Instantiate(SwarmPar, new Vector2(Spawn2.transform.position.x + Random.Range(-30, 30), Spawn2.transform.position.y + Random.Range(-30, 30)), Spawn1.transform.rotation);
-            Instantiate(SmallShip, new Vector2(Spawn2.transform.position.x + Random.Range(-30, 30), Spawn2.transform.position.y + Random.Range(-30, 30)), Spawn1.transform.rotation);
-
-        }*/
+    }
+    
+}

@@ -5,8 +5,8 @@ using UnityEngine;
 public class BulletController : MonoBehaviour
 {
 
-    public int Speed;
-    public float BulletDecayTime;
+    public int Speed; //speed of bullet
+    public float BulletDecayTime; //how fast bullet will dissapear
 
     private Rigidbody2D rigid;
 
