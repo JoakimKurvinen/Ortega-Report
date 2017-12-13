@@ -5,26 +5,25 @@ using UnityEngine.SceneManagement;
 
 public class TriggerEnd1 : MonoBehaviour
 {
-    public string target;
+    public string target; //the wanted tag
 
 
-    void OnTriggerExit2D(Collider2D Ship) //triggers on enter
+    void OnTriggerExit2D(Collider2D Ship) //triggers on exit
     {
-        Debug.Log(FindTarget("Red"));
-        if (FindTarget(target).Length == 1) //if name is correct
+       // Debug.Log(FindTarget("Red"));
+        if (FindTarget(target).Length == 1) //if array lenght is correct
         {
-            StartCoroutine(NextLevel());
-            
+            StartCoroutine(NextLevel()); //start the timer to load the next level
         }
 
     }
-    IEnumerator NextLevel()
+    IEnumerator NextLevel() //method to load next level
     {
-        yield return new WaitForSeconds(5);
-        SceneManager.LoadScene("Level2", LoadSceneMode.Single);
-
+        yield return new WaitForSeconds(5); //5s timer
+        SceneManager.LoadScene("Level2", LoadSceneMode.Single); //loads level2 
     }
-    GameObject[] FindTarget(string targetTag)
+
+    GameObject[] FindTarget(string targetTag)//returns an array of objects with tag targetTag
     {
         GameObject[] potTargets;
         

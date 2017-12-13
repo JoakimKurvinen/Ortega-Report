@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+/// <summary>
+/// check triggerEnd1 for comments. everything is pretty much the same
+/// </summary>
 public class TriggerEnd2 : MonoBehaviour
 {
     public string target;

@@ -30,18 +30,18 @@ public class Trigger : MonoBehaviour {
     {
         if (Player.gameObject.name == "PlayerShip" ) //if name is correct
         {
-            Debug.Log("Player entered trigger zone");
+            //Debug.Log("Player entered trigger zone");
             Text1.color = new Color(255, 255, 255, 255); //shows text1
-            GameObject.Find("Trigger1").GetComponent<BoxCollider2D>().enabled = false;
-            StartCoroutine(Bye());
+            GameObject.Find("Trigger1").GetComponent<BoxCollider2D>().enabled = false; //disables the collider
+            StartCoroutine(Bye()); //starts the timer to hide text1
 
         }
     }
     IEnumerator Bye()
     {
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(10); //10s timer
         
-        GameObject.Find("Text1").GetComponent<Text>().enabled = false;
+        GameObject.Find("Text1").GetComponent<Text>().enabled = false; //disables text1
 
     }
 }

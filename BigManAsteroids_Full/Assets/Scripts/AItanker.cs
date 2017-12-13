@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 /// <summary>
-/// simple ai script for the tanker 
+/// simple ai script for the tanker. check the AIfollow for more comments 
 /// </summary>
 public class AItanker : MonoBehaviour
 {
@@ -20,9 +20,7 @@ public class AItanker : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        rigidbody = this.GetComponent<Rigidbody2D>();
-        
-        
+        rigidbody = this.GetComponent<Rigidbody2D>();  
     }
 
     // Update is called once per frame
@@ -37,7 +35,6 @@ public class AItanker : MonoBehaviour
         if (Vector2.Distance(target.transform.position, transform.position) <= mRange)
         {
             //sets the ais velocity to be similar to the players movement style
-
             rigidbody.velocity = transform.up * mSpeed;
         }
 

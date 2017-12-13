@@ -21,7 +21,7 @@ public class AIFollow : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        target = GameObject.Find("PlayerShip");
+        target = GameObject.Find("PlayerShip"); //sets the target to be the player
         rigidbody = this.GetComponent<Rigidbody2D>();
     }
 
@@ -36,7 +36,6 @@ public class AIFollow : MonoBehaviour
         if (Vector2.Distance(target.transform.position, transform.position) <= mRange)
         {
             //sets the ais velocity to be similar to the players movement style
-            
             rigidbody.velocity = transform.up * mSpeed;
         }
 

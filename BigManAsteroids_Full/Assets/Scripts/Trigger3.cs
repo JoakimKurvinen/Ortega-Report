@@ -18,7 +18,7 @@ public class Trigger3 : MonoBehaviour
     {
         if (Tank.gameObject.name == "tanker") //if name is correct
         {
-            Instantiate(Spawn, new Vector2(MS.transform.position.x, MS.transform.position.y), MS.transform.rotation);
+            Instantiate(Spawn, new Vector2(MS.transform.position.x, MS.transform.position.y), MS.transform.rotation); //spawns the new version of the tanker
             Destroy(Rekt);
             Destroy(this.gameObject);
 

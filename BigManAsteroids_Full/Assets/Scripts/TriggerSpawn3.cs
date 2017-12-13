@@ -5,8 +5,7 @@ using UnityEngine.UI;
 
 public class TriggerSpawn3 : MonoBehaviour
 {
-
-    public GameObject Spawned;
+    public GameObject Spawned; //differnt things that wanted to spawn
     public GameObject Spawned2;
     public GameObject Spawned3;
     public GameObject TargetLocation;
@@ -15,11 +14,12 @@ public class TriggerSpawn3 : MonoBehaviour
     {
         TargetLocation = GameObject.Find("PlayerShip");
     }
-    void OnTriggerExit2D(Collider2D Tank) //triggers on enter
+    void OnTriggerExit2D(Collider2D Tank) //triggers on exit
     {
         if (Tank.gameObject.name == "tanker(Clone)") //if name is correct
         {
             //Debug.Log("Object entered trigger zone");
+            //spawns enemies at a certain random location from the player
             Instantiate(Spawned, new Vector2(TargetLocation.transform.position.x - Random.Range(-30, 40), TargetLocation.transform.position.y - Random.Range(40, 70)), TargetLocation.transform.rotation);
             Instantiate(Spawned, new Vector2(TargetLocation.transform.position.x - Random.Range(-30, 40), TargetLocation.transform.position.y - Random.Range(40, 70)), TargetLocation.transform.rotation);
             Instantiate(Spawned, new Vector2(TargetLocation.transform.position.x - Random.Range(-30, 40), TargetLocation.transform.position.y - Random.Range(40, 70)), TargetLocation.transform.rotation);
@@ -52,11 +52,8 @@ public class TriggerSpawn3 : MonoBehaviour
             Instantiate(Spawned3, new Vector2(TargetLocation.transform.position.x - Random.Range(-30, 40), TargetLocation.transform.position.y - Random.Range(650, 660)), TargetLocation.transform.rotation);
             Instantiate(Spawned3, new Vector2(TargetLocation.transform.position.x - Random.Range(-30, 40), TargetLocation.transform.position.y - Random.Range(650, 660)), TargetLocation.transform.rotation);
 
-
-
-            // spawns indicated object at triggers center position +- values
-            GameObject.Find("Trigger2").GetComponent<BoxCollider2D>().enabled = false;
-            GameObject.Find("TriggerEnd").GetComponent<BoxCollider2D>().enabled = true;
+            GameObject.Find("Trigger2").GetComponent<BoxCollider2D>().enabled = false; //disables collider for trigger2
+            GameObject.Find("TriggerEnd").GetComponent<BoxCollider2D>().enabled = true; //enables triggerend collider
         }
     }
 }
