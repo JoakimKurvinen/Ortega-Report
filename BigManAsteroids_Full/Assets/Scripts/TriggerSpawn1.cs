@@ -8,7 +8,7 @@ public class TriggerSpawn1 : MonoBehaviour {
     public GameObject Spawned;
     public GameObject TargetLocation;
     
-    void OnTriggerEnter2D(Collider2D Ship) //triggers on enter
+    void OnTriggerExit2D(Collider2D Ship) //triggers on enter
     {
         if (Ship.gameObject.name == "PlayerShip") //if name is correct
         {

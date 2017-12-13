@@ -33,7 +33,15 @@ public class Trigger : MonoBehaviour {
             Debug.Log("Player entered trigger zone");
             Text1.color = new Color(255, 255, 255, 255); //shows text1
             GameObject.Find("Trigger1").GetComponent<BoxCollider2D>().enabled = false;
-                
+            StartCoroutine(Bye());
+
         }
+    }
+    IEnumerator Bye()
+    {
+        yield return new WaitForSeconds(10);
+        
+        GameObject.Find("Text1").GetComponent<Text>().enabled = false;
+
     }
 }

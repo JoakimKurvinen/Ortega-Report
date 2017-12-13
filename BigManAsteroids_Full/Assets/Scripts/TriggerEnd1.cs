@@ -21,7 +21,7 @@ public class TriggerEnd1 : MonoBehaviour
     IEnumerator NextLevel()
     {
         yield return new WaitForSeconds(5);
-        SceneManager.LoadScene("Level3", LoadSceneMode.Single);
+        SceneManager.LoadScene("Level2", LoadSceneMode.Single);
 
     }
     GameObject[] FindTarget(string targetTag)
