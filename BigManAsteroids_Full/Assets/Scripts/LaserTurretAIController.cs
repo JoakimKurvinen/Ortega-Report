@@ -63,9 +63,8 @@ public class LaserTurretAIController : MonoBehaviour
 
         target = FindTarget(targetTag);
 
-        //if (target != null)
-
-        //{
+        if (target != null)
+        {
             if (Vector2.Distance(target.transform.position, transform.position) <= aRange)
             {
                 shooting = true; //if distance is less than attack range
@@ -83,7 +82,7 @@ public class LaserTurretAIController : MonoBehaviour
                 transform.rotation = Quaternion.Euler(new Vector3(0, 0, (angle - 90f)));//rotates turret to specified angle (-90f to get in phase with cursor)
                 Debug.Log("target found");
             }
-        //}
+        }
         else
         {
             Debug.Log("target is null");
@@ -95,7 +94,7 @@ public class LaserTurretAIController : MonoBehaviour
     IEnumerator Shoot()
     {   
         
-        if (shooting == true && running == false) //checks if shooting is true or is currently waiting after fireing
+        if (shooting == true && running == false && (Vector2.Distance(target.transform.position, transform.position) <= aRange)) //checks if shooting is true or is currently waiting after fireing
         {
             running = true;
             laseron = true;
