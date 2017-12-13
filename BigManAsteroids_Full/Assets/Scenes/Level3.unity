@@ -962,7 +962,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 227338446}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 247, y: 139, z: 0}
+  m_LocalPosition: {x: 375.5, y: 139, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 413812193}
@@ -2010,7 +2010,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 413812192}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 187, y: -99, z: 0}
+  m_LocalPosition: {x: 315.5, y: -99, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 227338450}
@@ -4660,6 +4660,16 @@ Prefab:
         type: 2}
       propertyPath: customcursorenabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212058369805832294, guid: 88827acd6cb2f5d438e7263da5b6c454,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212294286410905614, guid: 88827acd6cb2f5d438e7263da5b6c454,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114441678966164452, guid: 88827acd6cb2f5d438e7263da5b6c454, type: 2}
@@ -8859,7 +8869,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2024080353}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.6418304, y: 92.278534, z: 0}
+  m_LocalPosition: {x: -2.4960022, y: 92.278534, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 227338450}

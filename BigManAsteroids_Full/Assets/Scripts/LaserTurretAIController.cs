@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 /// <summary>
-/// simple turret ai which can shoot targets based on what is set.
-/// Distance is checked to see if to start shooting and when to end shooting.
-/// Ask Aleksi....
+/// AI turret that is intended to shoot down hostile bullets. can also be configured to shoot down
+/// normal enemies aswell.
 /// </summary>
 public class LaserTurretAIController : MonoBehaviour
 {
@@ -13,12 +12,12 @@ public class LaserTurretAIController : MonoBehaviour
     public float aRange; //attack range
     public float Firerate; //interval in seconds between shots
     public string targetTag; //tag from which targets can be selected from
-    public Material laserMat;
-    public GameObject Laserfade;
+    public Material laserMat; //material of which laser will be drawn with
+    public GameObject Laserfade; //prefab of object with collision for point of laser impact
 
     private GameObject target;
     private bool shooting = false; //sets shooting to false
-    private bool running = false;
+    private bool running = false; // temp bool to stop coroutine from running more than 1 at a time
 
     public float Radius; //how far away turret will be in relation to ship
     public float Phase; //which angle turret will be in relation to ship
@@ -86,7 +85,7 @@ public class LaserTurretAIController : MonoBehaviour
         else
         {
             
-            shooting = false;
+            shooting = false; //if noone in range, or target is null shooting will not occur
         }
         StartCoroutine(Shoot());
         RenderLine();
@@ -94,13 +93,13 @@ public class LaserTurretAIController : MonoBehaviour
     IEnumerator Shoot()
     {   
         
-        if (shooting == true && running == false && (Vector2.Distance(target.transform.position, transform.position) <= aRange)) //checks if shooting is true or is currently waiting after fireing
+        if (shooting == true && running == false && (Vector2.Distance(target.transform.position, transform.position) <= aRange))
         {
-            running = true;
-            laseron = true;
+            running = true; //set running to true so that for the duration of this coroutine, it will not run again
+            laseron = true; //laseron = true enables rendering of line
             Instantiate(Laserfade, new Vector2(target.transform.position.x, target.transform.position.y), target.transform.rotation);
-
-            yield return new WaitForSeconds(Firerate);
+            //instantiates a laserfade prefab which has collision detection
+            yield return new WaitForSeconds(Firerate); //wait for firerate amount of seconds
             
             laseron = false;
             running = false;
@@ -112,10 +111,10 @@ public class LaserTurretAIController : MonoBehaviour
         
     }
     
-    void RenderLine()
+    void RenderLine() //tries to render a line between turret and target.
     {
         LineRenderer line = GetComponent<LineRenderer>();
-        if (laseron == true)
+        if (laseron == true) //if laseron is false, it will not render
         {
             line.enabled = true;
             line.positionCount = 2;
@@ -138,7 +137,7 @@ public class LaserTurretAIController : MonoBehaviour
 
         
     }
-    GameObject FindTarget(string targetTag)
+    GameObject FindTarget(string targetTag) //for aquiring the closest valid target
     {
         GameObject[] potTargets;
         List<float> potDistance = new List<float>();
