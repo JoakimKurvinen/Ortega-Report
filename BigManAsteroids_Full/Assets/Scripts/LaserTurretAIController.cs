@@ -62,23 +62,25 @@ public class LaserTurretAIController : MonoBehaviour
 
 
         target = FindTarget(targetTag);
-
-        if (Vector2.Distance(target.transform.position, transform.position) <= aRange && target != null)
+        if (target != null)
         {
-            shooting = true; //if distance is less than attack range
+            if (Vector2.Distance(target.transform.position, transform.position) <= aRange)
+            {
+                shooting = true; //if distance is less than attack range
 
-            //TURRET ROTATION TOWARDS TARGET
-            mousePos = target.transform.position;//gets position of target
-            turretPos = transform.position;//gets position of turret relative to screen
+                //TURRET ROTATION TOWARDS TARGET
+                mousePos = target.transform.position;//gets position of target
+                turretPos = transform.position;//gets position of turret relative to screen
 
-            targetPos.x = mousePos.x - turretPos.x;//creates targetPos vector, drawing from position of turret to target
-            targetPos.y = mousePos.y - turretPos.y;
+                targetPos.x = mousePos.x - turretPos.x;//creates targetPos vector, drawing from position of turret to target
+                targetPos.y = mousePos.y - turretPos.y;
 
-            angle = Mathf.Atan2(targetPos.y, targetPos.x) * Mathf.Rad2Deg;//for calculating angle of how much turret has to rotate so it is pointing towards mouse
-                                                                          //print("turret at angle: " + angle);
+                angle = Mathf.Atan2(targetPos.y, targetPos.x) * Mathf.Rad2Deg;//for calculating angle of how much turret has to rotate so it is pointing towards mouse
+                                                                              //print("turret at angle: " + angle);
 
-            transform.rotation = Quaternion.Euler(new Vector3(0, 0, (angle - 90f)));//rotates turret to specified angle (-90f to get in phase with cursor)
-            Debug.Log("target found");
+                transform.rotation = Quaternion.Euler(new Vector3(0, 0, (angle - 90f)));//rotates turret to specified angle (-90f to get in phase with cursor)
+                Debug.Log("target found");
+            }
         }
         else
         {
