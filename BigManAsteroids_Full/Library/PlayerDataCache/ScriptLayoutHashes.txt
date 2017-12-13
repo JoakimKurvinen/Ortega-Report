@@ -14,6 +14,7 @@ af723155c251fcfa0e66530a75f3ea4c UnityEngine.Timeline.dll:UnityEngine.Timeline.T
 226955bb8efbb0c70111d74d1c4bddea Assembly-CSharp.dll:.GameController
 291735ae1810c3bac89765f0ebbc8977 Assembly-CSharp.dll:.PlayerShipController
 1d700d8ee6e85ee5dcb950b5f416ae31 Assembly-CSharp.dll:.TriggerEnd1
+44b96ee4d899b441449c7d45d97fc6ce Assembly-CSharp.dll:.ObjectiveTextThree
 a35dc9cca2faebc5f5f1aeb9e8e47bbe UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
 49cd62a578efc0a599b810a2b66cd49c UnityEngine.UI.dll:UnityEngine.UI.Button
@@ -108,6 +109,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 3f32f08a64daf40b09ed864d96fe3840 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransform
 73843688b51256aed059f049c540bca8 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 528ea1fd7c01796fc60c4e2f172ea229 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
+44b96ee4d899b441449c7d45d97fc6ce Assembly-CSharp.dll:.ObjectiveTextTwo
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.CollisionDetection
 dc07d7ad69b399a46e92c483bf1c04ca UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsTracker
@@ -117,9 +119,11 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 62b6f8b00d4436294ae693015eb30757 Assembly-CSharp.dll:.AIFollow
+44b96ee4d899b441449c7d45d97fc6ce Assembly-CSharp.dll:.ObjectiveTextFour
 5632a5f3c0d4af40787f4ddacb8a6e9e Assembly-CSharp.dll:.TurretPlayerController
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.SwarmParent
 32e8fe00b63ed946490b898f6024a2f2 Facebook.Unity.Settings.dll:Facebook.Unity.Settings.FacebookSettings
+62b6f8b00d4436294ae693015eb30757 Assembly-CSharp.dll:.AItanker
 aeefd16e7ddf9af3a243f1dbbcb19c13 Assembly-CSharp.dll:.Level4Controller
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
@@ -140,6 +144,7 @@ fc791b54f51cef0b92dbe95b6907f457 Assembly-CSharp.dll:.SwarmMinion
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.PlayModeRunnerCallback
 2a56361227def9f56c2cf57a88b32f4d UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.PlaymodeTestsController
 64eb32cc721b1cc68a91ed57461e188c UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.RemoteTestResultSender
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.TriggerEnd3
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 d3c16b8ccf80aa54aedf43b843f6b2c8 Assembly-CSharp.dll:.TurretAIController
@@ -149,6 +154,11 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
+62b6f8b00d4436294ae693015eb30757 Assembly-CSharp.dll:.AItanker2
+b24b59db63fa24dbc1dd517f9a8c71d2 Assembly-CSharp.dll:.Trigger3
 c399d6d3f984f5822be01aa976d29298 Assembly-CSharp.dll:.TurretController
 ed5a5b7ebd385d6f8b8b3f6db60e8bf5 Assembly-CSharp.dll:.CameraController
-a78a3d9110fc850c94c5a979cfc8b0e1 Assembly-CSharp.dll:.TriggerSpawn2
+d5c5bd957744676b5657918b67f6056c Assembly-CSharp.dll:.TriggerSpawn2
+f15a15191455f512a47b422bc2fc14ae Assembly-CSharp.dll:.TriggerSpawn3
+1d700d8ee6e85ee5dcb950b5f416ae31 Assembly-CSharp.dll:.TriggerEnd2
+44b96ee4d899b441449c7d45d97fc6ce Assembly-CSharp.dll:.ObjectiveText

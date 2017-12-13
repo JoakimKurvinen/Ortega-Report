@@ -70,7 +70,7 @@ public class PlayerShipController : MonoBehaviour
     {
         if (customcursorenabled)
         {
-            GUI.DrawTexture(new Rect(Input.mousePosition.x - 80, -(Input.mousePosition.y) + 615, Cursor.width, Cursor.height), Cursor);
+            GUI.DrawTexture(new Rect(Input.mousePosition.x - 79, -(Input.mousePosition.y) + 1000, Cursor.width, Cursor.height), Cursor);
         }
     }
 }

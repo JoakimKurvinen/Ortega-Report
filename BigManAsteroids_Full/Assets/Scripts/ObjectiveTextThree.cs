@@ -25,10 +25,10 @@ public GUIStyle myGUIStyle;
 
 		GUI.contentColor = Color.white;
 		GUI.color = Color.white;
-	
 
-        
-		GUI.Box(new Rect (230, 50, 500, 60),"<color=white><size=20>The logs you discovered tell us the star system is infested by a hostile lifeform that takes over everything it sees in massive swarms. We must escape Ortega, but we have no fuel. Protect the tanker as it goes to refill from a nearby hydrogen fuel depot. All our lives depend on it.</size></color>", myStyle);
+
+
+        GUI.Box(new Rect((1920 / 2) - 250, 130, 500, 60), "<color=white><size=36>The logs you discovered tell us the star system is infested by a hostile lifeform that takes over everything it sees in massive swarms. We must escape Ortega, but we have no fuel. Protect the tanker as it goes to refill from a nearby hydrogen fuel depot. All our lives depend on it.</size></color>", myStyle);
 		StartCoroutine(Bye());
       }
 	IEnumerator Bye(){

@@ -25,10 +25,10 @@ public GUIStyle myGUIStyle;
 
 		GUI.contentColor = Color.white;
 		GUI.color = Color.white;
-	
 
-        
-		GUI.Box(new Rect (230, 50, 500, 60),"<color=white><size=20>Massive radar contact approaching, it's the swarm! Fight for your life!</size></color>", myStyle);
+
+
+        GUI.Box(new Rect((1920 / 2) - 250, 130, 500, 60), "<color=white><size=36>Massive radar contact approaching, it's the swarm! Fight for your life!</size></color>", myStyle);
 		StartCoroutine(Bye());
       }
 	IEnumerator Bye(){

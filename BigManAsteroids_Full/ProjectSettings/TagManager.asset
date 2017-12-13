@@ -4,17 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Blue
   - Red
-  - PLAYER
-  - Turret
   - RedBullet
-  - BlueBullet
-<<<<<<< HEAD
-  - Swarm
-=======
-  - tanker
->>>>>>> ab1d1ff8aaaba45c2a38f7f6ef4d89d2d26678a2
   layers:
   - Default
   - TransparentFX
@@ -24,10 +15,10 @@ TagManager:
   - UI
   - 
   - 
-  - Trigger
-  - Red
-  - Blue
-  - tanker
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 

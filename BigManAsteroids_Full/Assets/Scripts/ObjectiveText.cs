@@ -21,14 +21,14 @@ public GUIStyle myGUIStyle;
 		
 		GUIStyle myStyle = new GUIStyle();
 		myStyle.wordWrap = true;
-
+        myStyle.alignment = TextAnchor.MiddleCenter;
 
 		GUI.contentColor = Color.white;
 		GUI.color = Color.white;
 	
 
         
-		GUI.Box(new Rect (230, 50, 500, 60),"<color=white><size=20>You have arrived in the star system, but the radar has picked up contacts. Prepare for combat!</size></color>", myStyle);
+		GUI.Box(new Rect ((1920/2)-250, 130, 500, 60),"<color=white><size=36>You have arrived in the Ortega star system, but your radar has picked up hostile contacts. Prepare for combat!</size></color>", myStyle);
 		StartCoroutine(Bye());
       }
 	IEnumerator Bye(){
